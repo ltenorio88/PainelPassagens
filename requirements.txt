@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+httpx
+playwright
+beautifulsoup4
+lxml
+psycopg2-binary
+sqlalchemy
+python-dotenv
+pydantic
