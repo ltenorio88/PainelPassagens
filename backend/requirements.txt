@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+python-jose
+python-dotenv
+bcrypt
+PyJWT
+requests
+beautifulsoup4
+selenium
+lxml
+pydantic
+httpx
+playwright
