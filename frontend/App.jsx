@@ -20,12 +20,12 @@ export default function App() {
   };
 
   return (
-    <div style={{ padding: 20 }}>
-      <h1>Painel de Passagens</h1>
-      <button onClick={buscar}>Buscar</button>
-      <ul>
+    <div className="p-6">
+      <h1 className="text-2xl font-bold mb-4">Painel de Passagens</h1>
+      <button onClick={buscar} className="bg-blue-600 px-4 py-2 rounded hover:bg-blue-500">Buscar</button>
+      <ul className="mt-4 space-y-2">
         {Array.isArray(resultado) && resultado.map((r, i) => (
-          <li key={i}>{r.companhia} - R${r.preco}</li>
+          <li key={i} className="bg-gray-800 p-2 rounded">{r.companhia} - R${r.preco}</li>
         ))}
       </ul>
     </div>
