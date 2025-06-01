@@ -1,11 +1,10 @@
-# render.yaml
 services:
   - type: web
     name: painel-passagens
     env: docker
     region: oregon
     plan: free
-    dockerfilePath: ./backend/Dockerfile
+    dockerfilePath: ./Dockerfile
     autoDeploy: true
     envVars:
       - key: SECRET_KEY
