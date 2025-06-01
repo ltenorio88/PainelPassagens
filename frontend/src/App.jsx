@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 function App() {
   const [resultados, setResultados] = useState([]);
 
- const buscar = async () => {
-  try {
+  const buscar = async () => {
     const resposta = await fetch('https://painel-passagens.onrender.com/search/skyscanner', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -16,20 +15,6 @@ function App() {
         adultos: 1
       })
     });
-
-    if (!resposta.ok) {
-      throw new Error(`Erro: ${resposta.status}`);
-    }
-
-    const dados = await resposta.json();
-    console.log("Resultados:", dados);
-    // Aqui você pode atualizar o estado do React: setResultados(dados)
-  } catch (erro) {
-    console.error("Erro ao buscar passagens:", erro);
-    alert("Falha ao buscar passagens. Tente novamente.");
-  }
-};
-
     const dados = await resposta.json();
     setResultados(dados);
   };
