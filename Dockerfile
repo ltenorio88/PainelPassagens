@@ -1,13 +1,11 @@
-
-# Etapa do frontend
 FROM node:20 as frontend
 WORKDIR /frontend
 COPY frontend/package.json ./
+COPY frontend/package-lock.json ./
 RUN npm install
 COPY frontend ./
 RUN npm run build
 
-# Etapa do backend
 FROM python:3.10
 WORKDIR /app
 COPY requirements.txt .

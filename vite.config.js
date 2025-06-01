@@ -5,7 +5,6 @@ export default defineConfig({
   plugins: [react()],
   root: './frontend',
   build: {
-    outDir: 'dist',
-    emptyOutDir: true,
-  },
+    outDir: 'dist'
+  }
 });
